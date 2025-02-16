@@ -79,4 +79,8 @@ public class StorageService {
             System.out.println(searchable.getTypeContent());
         }
     }
+
+    public Optional<Product> getProductById(UUID id) {
+        return Optional.ofNullable(productStorage.get(id));
+    }
 }
